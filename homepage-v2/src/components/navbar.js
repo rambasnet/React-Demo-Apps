@@ -58,14 +58,15 @@ class Navbar extends React.Component {
               <Route exact path="/research">
                 <h1>Research</h1>
                 <h2>Demosntrate it...</h2>
+                <p>Hint: create research.js page and use publication.js component in rigth place</p>
               </Route>
               <Route exact path="/resources">
                 <h1>Resources</h1>
-                <h2>Can you try this? concert resources.html page from homepage-v1 to React component</h2>
+                <h2>Can you try this? convert resources.html page from homepage-v1 to React component</h2>
               </Route>
               <Route exact path="/contact">
                 <h1>Contact</h1>
-                <h2>Can you try this? concert contact.html page from homepage-v1 to React component</h2>
+                <h2>Can you try this? convert contact.html page from homepage-v1 to React component</h2>
               </Route>
               <Route path="*">
               <PageNoteFound />
