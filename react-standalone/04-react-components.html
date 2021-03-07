@@ -1,8 +1,13 @@
-<!-- Demo of various ways to create React components -->
+<!-- 
+  - there are several ways to create React components 
+  - any HTML element can be rendered or managed by React DOM
+  - application built with just React usually have a single "root" DOM node
+  - however, you can have as many isolated "root" DOM nodes as you like
+-->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>02 JSX Demo</title>
+    <title>02 JSX Components</title>
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js"-->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
@@ -11,6 +16,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
+    <h1>JSX Components</h1>
     <div id="app"></div>
     <div id="demo1"></div>
     <div id="demo2"></div>

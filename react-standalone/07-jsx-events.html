@@ -16,6 +16,7 @@ With JSX you pass a function as the event handler, rather than a string.
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
+    <h1>Handling Events</h1>
     <div id="root"></div>
     <script type="text/babel">
 
@@ -23,10 +24,9 @@ With JSX you pass a function as the event handler, rather than a string.
       fname: "John",
       lname: "Smith",
       avatarUrl: 'https://ui-avatars.com/api/?name=John+Smith'
-      // the link generates an images with firat and last initials
+      // the link generates an images with first and last initials
     }
 
-    
     // click to update Avatar after changing first and lastname
     const element = (
       <div>
