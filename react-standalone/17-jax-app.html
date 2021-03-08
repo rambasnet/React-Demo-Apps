@@ -20,15 +20,16 @@ TOD App - https://reactjs.org/
   <body>
     <h1>React App Demo</h1>
     <div id="app"></div>
+    
     <script type="text/babel">
 
     class TodoList extends React.Component {
       // just display the properties as list items
       render() {
         return (
-          <ul>
+          <ul className="list-group">
             {this.props.items.map(item => (
-              <li key={item.id}>{item.text}</li>
+              <li className="list-group-item" key={item.id}>{item.text}</li>
             ))}
           </ul>
         );
@@ -49,7 +50,7 @@ TOD App - https://reactjs.org/
             <h3>TODO List</h3>
             <TodoList items={this.state.items} />
             <form onSubmit={this.handleSubmit}>
-              <div class="form-group">
+              <div className="form-group">
                 <label htmlFor="new-todo">
                   What needs to be done?
                 </label>
@@ -59,7 +60,7 @@ TOD App - https://reactjs.org/
                   value={this.state.text}
                 />
               </div>
-              <button type="button" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary">
                 Add #{this.state.items.length + 1}
               </button>
             </form>
@@ -73,11 +74,13 @@ TOD App - https://reactjs.org/
 
       handleSubmit(e) {
         e.preventDefault();
+        // check for empty textbox
         if (this.state.text.length === 0) {
           return;
         }
+        let todo = `${this.state.items.length+1}. ${e.target.value}`;
         const newItem = {
-          text: this.state.text,
+          text: todo,
           id: Date.now()
         };
         this.setState(state => ({
